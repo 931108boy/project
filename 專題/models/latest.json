@@ -1,0 +1,5 @@
+{
+  "scaler": "models\\v1_rf_20250925_235618_scaler.joblib",
+  "model": "models\\v1_rf_20250925_235618_model.joblib",
+  "meta": "models\\v1_rf_20250925_235618_feat_meta.json"
+}
