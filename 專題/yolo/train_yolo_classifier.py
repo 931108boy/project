@@ -1,18 +1,25 @@
 # yolo/train_yolo_classifier.py
 from ultralytics import YOLO
+from pathlib import Path
 
 def main():
-    data_dir = "yolo/datasets"   # 改成你的資料夾
-    model = YOLO("resnet18")     # 也可 "efficientnet_b0" / "mobilenetv3_small"
+    # 改成你的實際資料夾「絕對路徑」
+    data_dir = r"C:\Users\USER\Downloads\yolo\datasets"
 
+    # 也可用 Path 產生與檢查
+    data_dir = str(Path(data_dir).resolve())
+
+    model = YOLO("yolov8n-cls.pt")   # 或 "yolo11n-cls.pt"
+
+    print("🔎 Using dataset:", data_dir)  # 看看實際路徑
     results = model.train(
         data=data_dir,
-        imgsz=224,
+        imgsz=128,
         epochs=50,
-        batch=64,
-        patience=10,         # 早停
-        lr0=0.003,           # 初始學習率
-        optimizer='SGD',     # 或 'Adam' / 'AdamW'
+        batch=8,
+        patience=10,
+        lr0=0.003,
+        optimizer='SGD',
         seed=42,
         verbose=True,
         project="runs/classify",

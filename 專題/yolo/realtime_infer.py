@@ -3,7 +3,7 @@ import os, cv2, math, numpy as np
 from ultralytics import YOLO
 import mediapipe as mp
 
-WEIGHTS = "runs/classify/train/weights/best.pt"  # 換成你的 best.pt 路徑
+WEIGHTS = "C:/Users/93110/OneDrive/桌面/project/專題/yolo/runs/classify/train_custom/weights/best.pt"  # 換成你的 best.pt 路徑
 IMG_SIZE = 224
 MARGIN = 0.35
 CAM_INDEX = 0
