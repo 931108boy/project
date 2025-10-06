@@ -1,0 +1,18 @@
+{
+  "data_dir": "C:\\Users\\93110\\OneDrive\\桌面\\project\\專題\\data",
+  "n_samples": 24,
+  "n_subjects": 1,
+  "class_counts": {
+    "0": 6,
+    "1": 18
+  },
+  "features": [
+    "Ca",
+    "Hp",
+    "B",
+    "M"
+  ],
+  "test_size": 0.2,
+  "seed": 42,
+  "model_path": "C:\\Users\\93110\\OneDrive\\桌面\\project\\專題\\data\\tabular_baseline.pkl"
+}
